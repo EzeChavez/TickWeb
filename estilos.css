@@ -5,6 +5,8 @@
   font-family: "Arial", Georgia, Serif;
   font-size: 15px;
 }
+
+
 header {
   text-align:center;
   border: 1px solid #666;
@@ -15,6 +17,7 @@ a {
   color: #333;
   text-decoration: none;
 }
+
 section,aside {
   margin-top: 5px;
   padding: 10px;
@@ -34,6 +37,11 @@ section {
   background: #fafafa;
   border: 1px solid #ccc;
 }
+
+section img{
+  width: 70%; 
+}
+
 aside {
   float: right;
   width: 25%;
@@ -43,7 +51,7 @@ aside {
 
 nav {
   padding:0.2%;
-  background:#f06156;
+  background:#3d5967;
   margin-top: 0.5%;
 }
 nav ul {
@@ -86,7 +94,7 @@ footer a {
 }
 
 h2 {
-  color: #f06156;
+  color: #3d5967;
 }
 /* pantalla maximo 980px */
 @media screen and (max-width:980px) {
