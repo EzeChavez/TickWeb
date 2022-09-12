@@ -10,7 +10,7 @@
 header {
   text-align:center;
   border: 1px solid #666;
-  border-radius:3px;
+  border-radius:5px;
   background: #666;
 }
 a {
@@ -73,6 +73,15 @@ nav ul li:hover a {
   color: rgb(255, 255, 255);
   background:#5b5453;
   
+}nav ul :hover  {
+
+  background:#e7e6e6;
+  border-radius: 5px;
+}
+nav  :hover  {
+
+  background:#486e81;
+  border-radius: 5px;
 }
 nav ul li a {
  display:inline-block;

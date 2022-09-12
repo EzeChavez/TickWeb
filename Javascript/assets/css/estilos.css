@@ -77,6 +77,38 @@ main{
     background: #fff;
     color: #71787e;
 }
+.caja__trasera a {
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera a:hover{
+    background: #fff;
+    color: #71787e;
+}
+.Etiqueta {
+    padding: 30px 40px;
+ 
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(234, 13, 13);
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera a:hover{
+    background: #fff;
+    color: #71787e;
+}
 
 /*Formularios*/
 
