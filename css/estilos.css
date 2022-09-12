@@ -11,11 +11,15 @@ header {
   text-align:center;
   border: 1px solid #666;
   border-radius:3px;
-  background: #cccccc;
+  background: #666;
 }
 a {
   color: #333;
   text-decoration: none;
+}
+h1 {
+color: #fff;
+
 }
 
 section,aside {
@@ -65,9 +69,10 @@ nav ul {
 nav ul li {
   display: inline;
 }
-nav ul li:hover {
-  background-color: rgb(131, 129, 255);
-  text-decoration: underline;
+nav ul li:hover a {
+  color: rgb(255, 255, 255);
+  background:#5b5453;
+  
 }
 nav ul li a {
  display:inline-block;
