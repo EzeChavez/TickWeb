@@ -62,7 +62,7 @@ main{
 }
 
 .caja__trasera button{
-    padding: 10px 40px;
+    padding: 10px 30px;
     border: 2px solid #fff;
     font-size: 14px;
     background: transparent;
@@ -93,22 +93,7 @@ main{
     background: #fff;
     color: #71787e;
 }
-.Etiqueta {
-    padding: 30px 40px;
- 
-    font-size: 14px;
-    background: transparent;
-    font-weight: 600;
-    cursor: pointer;
-    color: rgb(234, 13, 13);
-    outline: none;
-    transition: all 300ms;
-}
 
-.caja__trasera a:hover{
-    background: #fff;
-    color: #71787e;
-}
 
 /*Formularios*/
 
@@ -151,7 +136,7 @@ main{
 }
 
 .contenedor__login-register form button{
-    padding: 10px 40px;
+    padding: 20px 40px;
     margin-top: 40px;
     border: none;
     font-size: 14px;
