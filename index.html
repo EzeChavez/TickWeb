@@ -4,27 +4,40 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
 </head>
  
 <body>
  
-<div class="container">
+<div >
 	<header>
-		<a href="index.html"><h1>Tick.ar</h1></a>
+	<icon>
+        
+    
 	
 
 	<nav>
+      <!--  <img id="logo" src="../TickWeb/imgs/logo.png" height="200"> !-->
         <ul>
+            
+            
+            <li><a href="html/Contacto.html">Servicios</a></li>
             <li><a href="html/Novedades.html">Novedades</a></li>
-            <li><a href="html/Contacto.html">Contacto</a></li>
-            <li><a href="html/SobreNosotros.html">Sobre Nosotros</a>
-                <li><a href="Javascript/login.html">Iniciar Sesion</a></li>
+            <li><a href="html/SobreNosotros.html">Equipo</a>
+                <li><a href="html/Contacto.html">Contacto</a></li>
+            <li><a href="Javascript/login.html">Iniciar Sesion</a></li>
           </ul>
 	</nav>
 	</header>
+  
 	<section>
-		<h2>Aplicacion Multiplataforma</h2>
-
+        <h1>Bienvenido a Tick</h1>
+        <p id="Principal">Tick.ar le ofrece el proceso completo de principio a fin para administrar reservas, gestionar clientes y automatizar consultas en un solo lugar. Nuestro sistema líder de gestión y reservas basado en la nube es simple y fácil de usar.  </p>
+        <a id="btn_Start"  href="html/Contacto.html">Start Demo</a>
+<!--
 			<p>
 Tick.ar Es un proyecto personal que estoy desarrollando como parte de  mi practica profesional.</p>
 			<p>
@@ -33,50 +46,19 @@ Surge en base a la necesidad de contar con un software que te permita <b> Admini
 <p>Está aplicacion esta destinada a Inmobiliarias, complejos turisticos y particulares que alquilen sus propiedades de manera temporal.</p>
 
 <p>Actulmente me encuentro en la fase de producción y pronto tendremos el primer Beta Test.</p>
-	
-<script type="text/javascript" src="Javascript/GetElmnt.js"></script>
+
+    Por ahora comento este scrip para hacer el rebuilding del front
+    <script type="text/javascript" src="Javascript/GetElmnt.js"></script>
     
 <img height="300" src="imgs/Tick.ar3.png"   id="foto" onmouseover="cambia1()" onmouseout="cambia2()"/>
 
- 
+!-->
    
        
 </section>
+</div>
    
-	<aside>
-    <h2>Suscribite para probar nuestra version Beta apenas este disponible.</h2>
-    <FORM  ACTION=mailto:eze_653@hotmail.com METHOD= “POST”>
-         <INPUT TYPE = “TEXT” NAME = “txt_Nom” placeholder="*Nombre" required> 
-        <INPUT TYPE = “Text” NAME = “txt_Apellido” placeholder="Apellido">
-        <INPUT TYPE = "email" NAME = “txt_email” placeholder="*email"required>
-            <br><br>
-        Le gustaria utilizar la aplicacion en:<br>
-        Un Hotel: <INPUT TYPE = checkbox  NAME = “chk1” CHECKED>
-        Apartamentos: <INPUT TYPE =checkbox  NAME = “chk2” >
-        Cabañas: <INPUT TYPE = checkbox  NAME = “chk3” >
-            Otro: <INPUT TYPE = checkbox  NAME = “chk4” >
-            <br>
-            <br>Ha utilizado alguna otra aplicacion para administrar su inmueble? <br>
-        Si <INPUT TYPE = "radio" name="radios"  CHECKED>
-        No <INPUT TYPE = "radio" name="radios" >
-            <br>  <br>       
-             País:
-        <SELECT NAME=”CbPaises” SIZE=1>
-            <OPTION VALUE=”1” SELECTED>Argentina</OPTION>
-        <OPTION VALUE=”2” >Mexico</OPTION>
-        <OPTION VALUE=”3” >España</OPTION>
-        <OPTION VALUE=”4” >Otro</OPTION>
-            </SELECT><BR>
-      
-               <p> <TEXTAREA placeholder="Comentario"  ROWS= “10” COLS= “40” ALIGN= “LEFT”  ></TEXTAREA></p>
-                <br>
-      
-        <INPUT TYPE= RESET id=”BtnCancelar” VALUE=Cancelar >
-            <INPUT TYPE= SUBMIT id=”BtnEnviar” VALUE=Enviar >
-        </FORM>
-      <h2>  "Cupos Limitados"</h2>
-        
-  </aside>
+	<div id="Due"><img id="logo" src="../TickWeb/imgs/EjemploResponsive.png"> </div>
 	<footer>
 		<a href="https://www.linkedin.com/in/sergio-ezequiel-chavez-491580215" target="_blank" rel="noopener noreferrer">EzeChavez</a>
 	</footer>
