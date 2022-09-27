@@ -8,11 +8,10 @@ header {
   text-align:center;
   font-family: 'Open+Sans:wght@300', sans-serif;
   font-size: 16px;
+  padding-top: 20px;
 
 }
-header img{
-  float: left;
-}
+
 a {
   color: #333;
   text-decoration: none;
@@ -23,6 +22,25 @@ font-family: 'Open Sans', sans-serif;
 
 font-size: 60px;
 
+}
+
+nav a {
+  color: #2e424d;
+  font-family: 'Open Sans', sans-serif;
+  
+  font-size: 16x;
+  
+  }
+
+nav ul li svg{
+  float: left;
+  padding-left: 100px;
+  padding-top: 3px;  
+}
+#login{
+  float: right;
+  padding-right: 20px;
+  
 }
 
 section,aside {
@@ -87,7 +105,7 @@ section a{
 nav {
   padding:0.2%;
   
-  margin-top: 0.5%;
+ 
 }
 nav ul {
   list-style-type: none;
@@ -99,7 +117,7 @@ nav ul li {
 }
 
 
-nav ul li a {
+nav ul li a  {
  display:inline-block;
 
  text-decoration:none;
@@ -110,6 +128,15 @@ nav ul li a {
   
   
 }
+nav ul li b{
+  float: left;
+
+}
+nav ul c {
+  float: right;
+  padding-right: 200px;
+}
+
 footer {
   position: fixed;
   width: 100%;

@@ -20,7 +20,13 @@ main{
     margin: auto;
     margin-top: 100px;
 }
-
+nav ul a li{
+    color: #8b9096;
+   
+    padding-left: 5%;
+    padding-top: 5%;
+    
+}
 .contenedor__todo{
     width: 100%;
     max-width: 800px;
