@@ -154,6 +154,17 @@ footer a {
 h2 {
   color: #3d5967;
 }
+#Subtitulo{
+ 
+  padding-left: 3%;
+}
+#fecha{
+	background-color: white;
+}
+
+
+
+
 /* pantalla maximo 980px */
 @media screen and (max-width:980px) {
   .container {

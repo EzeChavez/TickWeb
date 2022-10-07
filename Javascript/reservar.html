@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Reserva</title>
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<header>
+	<icon>
+        
+    
+	
+
+	<nav>
+      <!--  <img id="logo" src="../TickWeb/imgs/logo.png" height="200"> !-->
+
+        <ul>
+            <a href="../index.html"><li><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-up-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M3.544 10.705A.5.5 0 0 0 4 11h8a.5.5 0 0 0 .374-.832l-4-4.5a.5.5 0 0 0-.748 0l-4 4.5a.5.5 0 0 0-.082.537z"/>
+      
+            </svg><b href="../index.html"> Tick.ar</b></li></a>
+            <li><a href="../Javascript/Reservar.html">Reservar</a></li>
+            <li><a href="../html/Novedades.html">Novedades</a></li>
+            <li><a href="../html/SobreNosotros.html">Equipo</a>
+            <li><a href="../html/Contacto.html">Contacto</a></li>
+            <li><a href="../Javascript/login.html">Iniciar Sesion</a></li>
+          </ul>
+     
+	</nav>
+	</header>
+<!-- Scripts java-->
+
+<script language="javascript">
+        
+	var auxMarca = 0;
+	
+	var marca_1 =new Array("Cabaña","Hotel","Camping","Habitación");
+	var precio_marca1=new Array(1000,5000,1090,500);
+	
+	var marca_2=new Array("Bungalow","Glamping","Domo", "Carpa");
+	var precio_marca2=new Array(3900,2800,3203,7452);
+	
+	var marca_3=new Array("Departamento","Airbnb","Sillon", "Casa");
+	
+	var precio_marca3=new Array(1002,8020,9300,6223);
+
+	
+
+
+	function consultar()
+	{
+	
+		var pos=document.fPresupuesto.LstOpciones.selectedIndex;
+		 var precio=parseInt(document.fPresupuesto.LstOpciones.options[pos].value);
+		 var cant=document.fPresupuesto.tCantidad.value;
+		 
+		var DateIni= document.fPresupuesto.fechainicio.value;
+		var DateFin= document.fPresupuesto.fechafin.value;
+		
+
+		var provincia = document.fPresupuesto.Cb_Lugares.options[pos].value;
+		Total=precio*cant;
+		
+		
+
+
+		 
+		 document.getElementById("txt").innerHTML = "<br> <br> <br> <br> Gracias por su reserva<br>El valor total de su reserva es de: $" + Total +"<br> <br> Para " + cant + " personas. <br> Desde el: " + DateIni + "<br> Al: "+ DateFin;
+
+
+	
+
+
+
+		 
+	  
+	  }
+	
+	  
+	function CargarLista(valor)
+	{
+	   
+	  if (valor==0)
+	  {
+		lmatriz= marca_1.length;
+		for(i=0;i<lmatriz;i++)
+		{
+		  document.fPresupuesto.LstOpciones.options[i].value=precio_marca1[i];
+		  document.fPresupuesto.LstOpciones.options[i].text=marca_1[i];
+		}	
+	  }
+	  else
+	  {
+		if (valor==1)
+		{
+		  lmatriz= marca_2.length;
+		  for(i=0;i<lmatriz;i++)
+		  {
+			document.fPresupuesto.LstOpciones.options[i].value=precio_marca2[i];
+			document.fPresupuesto.LstOpciones.options[i].text=marca_2[i];
+		  }
+		}
+		else
+		{
+		  lmatriz= marca_3.length;
+		  for(i=0;i<lmatriz;i++)
+		  {
+			document.fPresupuesto.LstOpciones.options[i].value=precio_marca3[i];
+			document.fPresupuesto.LstOpciones.options[i].text=marca_3[i];
+		  }
+	
+		}
+		
+	  }
+	}
+	
+	function Solo_Numerico(variable){
+	  Numer=parseInt(variable);
+	  if (isNaN(Numer)){
+			return "";  
+		}      
+	else { 
+	  return Numer;  
+	}
+	  } 
+	
+	function ValNumero(Control){
+		 Control.value=Solo_Numerico(Control.value);
+	}
+	
+	</script>
+
+<body>
+
+	
+	<div class="container">
+		
+		<div class="row text-white text-center">
+			<div class="col-5 bg-dark border">
+						<form name="fPresupuesto" id="FormPress" class="Formulario">              
+							<fieldset><legend>Reservar</legend>
+								Seleccione el lugar <select name="Cb_Lugares"  onclick="CargarLista(value)"  size="1">
+										<option value="0016" selected="selected" >---</option>
+										<option value="0" >Cordoba</option>
+										<option value="1" >Mendoza</option>
+										<option value="2">Salta</option>
+										
+										</select>
+
+									<br></br><label>Desde: </label> <input type="text" id="fechainicio" data-date-format="dd MM yyyy" name="fechainicio" placeholder="dd/mm/aaaa" readonly>
+									
+									<br></br><label>Hasta: </label> <input type="text" id="fechafin" data-date-format="dd MM yyyy" name="fechafin" placeholder="dd/mm/aaaa"  readonly>
+									<br></br>
+								Tipo de alojamiento: 
+									<select name="LstOpciones" size="1">
+									<option value="012312" selected="selected">---</option>
+									<option value="0">Cabaña</option>
+									<option value="1">Hotel</option>
+									<option value="2">Camping</option>
+									<option value="3">Habitación</option>
+									</select><br /><br />
+								Cantidad de personas:
+									<input type="number" required name="tCantidad" min="1" max="10" onkeyUp="return ValNumero(this);"  />
+							</fieldset>
+							<br />
+							<br />
+							<input type="button" name="btnAceptar" value="Aceptar" id="btnAceptar"   onclick="consultar()"/>
+								<input  type="reset" name="btnReset" value="Cancelar"/>
+						<br></br>
+						</form>
+				</div>	
+				<div class="col-5 bg-dark border" id="txt"> >-<
+					
+			
+				</div>
+			</div>
+		</div>
+		
+	
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="bootstrap-datetimepicker.min.js"></script>
+	<script src="scripts.js"></script>
+
+	
+</body>
+</html>
