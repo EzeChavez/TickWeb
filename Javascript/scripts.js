@@ -47,7 +47,7 @@ $(document).ready(function(){
 
   $("#fechafin").datetimepicker({
     language:  'es',
-   
+  
     autoclose: 1,
     todayBtn: 1,
     todayHighlight: 1,
@@ -63,6 +63,7 @@ $(document).ready(function(){
     var iniciodate = ev.date;
     $('#fechafin').datetimepicker('setStartDate', iniciodate);
 });
+
 
 
 
