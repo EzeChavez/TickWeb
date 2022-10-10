@@ -99,7 +99,23 @@ section a{
  
 }
 
+#reservar{
+  font-family: 'Open Sans', sans-serif;
+ background-color: #EAEBED;
+  
+  font-size: 16px;
+  padding: 0.3em 3em;
+  border-radius: 15px;
+  border-style: none;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  margin:20px;
 
+}
+#cabecera{
+  padding-left: 5%;
+  padding-bottom: 2%;
+}
 
 
 nav {
