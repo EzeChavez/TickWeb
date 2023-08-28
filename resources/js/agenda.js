@@ -154,8 +154,9 @@ $(document).ready(function () {
         $('#reserva').modal('show');
     });
 
-    $('#buscarCliente').on('input', function () {
+    $('#buscarCliente').on('click', function () {
         var searchTerm = $(this).val();
+        
         
         $.ajax({
             url: '/tick-app/public/buscar-clientes',

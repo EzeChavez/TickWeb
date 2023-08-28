@@ -104,6 +104,7 @@ class ClienteController extends Controller
     {
         
         $searchTerm = $request->input('buscarCliente');
+        
         $searchTermNumeric = intval($searchTerm);
        // dd($searchTerm); // Verifica si $searchTerm se recibe correctamente
         // Llama al procedimiento almacenado para buscar clientes

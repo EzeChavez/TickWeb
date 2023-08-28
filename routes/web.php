@@ -1,9 +1,12 @@
 <?php
+
+use App\Http\Controllers\AlquilerCampingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Reservas_Aparts_Controller;
 use App\Http\Controllers\SimpleController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\InicioController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +34,9 @@ Route::get('/reservas/create', function () {
     return view('reservas_aparts.create');
 });
 
+
+Route::get('/alquileres-camping', [AlquilerCampingController::class, 'index'])->name('AlquilerCamping.view');
+Route::get('/inicio-tick', [InicioController::class, 'index'])->name('inicio.view');
 
 
 // Rutas de ClienteController

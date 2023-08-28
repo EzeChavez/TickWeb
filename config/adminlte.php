@@ -309,7 +309,7 @@ return [
       ['header' => 'Inicio'],
         [
             'text'        => 'Inicio',
-            'url'         => '/Inicio',
+            'url'         => '/inicio-tick',
             'icon'        => 'far fa-fw fa-calendar',
             'label'       => '%',
             'label_color' => 'success',
@@ -325,7 +325,7 @@ return [
        ['header' => 'Camping'],
        [
         'text'        => 'Grilla/Ocupación',
-        'url'         => '/camping',
+        'url'         => '/alquileres-camping',
         'icon'        => 'far fa-fw fa-calendar',
         'label'       => '*-*',
         'label_color' => 'success',
