@@ -142,9 +142,9 @@
                               <div id="buscarClienteWrapper">
                         <label for="buscarCliente">Buscar cliente</label>
                         <input type="text" class="form-control" name="buscarCliente" id="buscarCliente">
-                        <select class="form-control" name="lbClientes" id="lbClientes">
-                            <!-- Opciones se llenarán dinámicamente aquí -->
-                        </select>
+                         <select class="form-control" name="lbClientes" id="lbClientes">
+        <!-- Opciones se llenarán dinámicamente aquí -->
+    </select>
                                 <input type="hidden" name="clienteId" id="clienteId"> <!-- Para almacenar el ID del cliente seleccionado -->
                     </div>
                         <div id="resultadosBusqueda"></div> <!-- Agrega este elemento para mostrar los resultados -->

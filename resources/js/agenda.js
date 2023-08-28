@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $(document).ready(function () {
         $('#btnGuardar').click(function () {
-            const $ = require('jquery');
+            //const $ = require('jquery');
             $.ajax({
                 url: $('#form').attr('action'),
                 type: 'POST',
@@ -141,11 +141,52 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    // Cuando se hace clic en el botón "Nueva reserva"
+    $('#btnNuevaReserva').click(function () {
+        // Restablece los campos del formulario
+        $('#form')[0].reset();
 
+        //$('#tbCliente').hide();
+       //$('#buscarCliente').show();
 
+        // Abre el modal
+        $('#reserva').modal('show');
+    });
 
-//A partid de acá
+    $('#buscarCliente').on('input', function () {
+        var searchTerm = $(this).val();
+        
+        $.ajax({
+            url: '/tick-app/public/buscar-clientes',
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': csrfToken, // Usar el token CSRF obtenido del elemento HTML
+            },
+            data: { searchTerm: searchTerm },
+            dataType: 'json',
+            success: function (response) {
+                $('#resultadosBusqueda').empty();
 
+                if (response.length > 0) {
+                    $.each(response, function (index, cliente) {
+                        var clienteHtml = '<p>' + cliente.nombre +' - '+ cliente.dni + '</p>';
+                        $('#resultadosBusqueda').append(clienteHtml);
+                    });
+                } else {
+                    $('#resultadosBusqueda').html('<p>No se encontraron resultados.</p>' +searchTerm);
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr.responseText);
+
+            }
+            
+        });
+        console.log(searchTerm)
+    });
+});
 
 
 
