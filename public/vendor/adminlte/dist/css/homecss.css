@@ -1,0 +1,110 @@
+h1 {
+    color: #2e424d;
+    font-family: 'Open Sans', sans-serif;
+    
+    font-size: 60px;
+    
+    }
+    
+    
+    
+    
+    section {
+      float: left;
+      width: 50%;
+      padding-top: 0.5%;
+    }
+    
+    #Due{
+      float: right;
+      width: 100px;
+      padding-right: 0.2%;
+      padding-top: 3%;
+      
+     
+      box-sizing: border-box;
+     
+      border-color: #2e424d;
+      
+    }
+    
+    
+    section p {
+    font-family: 'Open Sans', sans-serif;
+    }
+
+    
+   
+    
+    
+
+    h2 {
+      color: #3d5967;
+    }
+    #Subtitulo{
+     
+      padding-left: 3%;
+    }
+    #fecha{
+        background-color: white;
+    }
+    
+    
+    
+    
+    /* pantalla maximo 980px */
+    @media screen and (max-width:980px) {
+      .container {
+        width:98%;
+      }
+      section {
+        width:68%;
+      }
+    }
+     
+    /* pantalla maximo 700px */
+    @media screen and (max-width:700px) {
+      aside,section {
+        float:none;
+        width:96%;
+        font-size:1.2em;
+      }
+      nav, section {
+        font-size:1.2em;
+      }
+      aside {
+        margin-top:5px;
+        background:#333;
+        color: #fff;
+      }
+      nav ul {
+        float:none;
+        clear:both;
+      }
+    }
+     
+     
+    /* pantalla maximo 480px */
+    @media screen and (max-width:480px) {
+      aside {
+        display:block;
+        background:#333;
+        color: #fff;
+        font-size:1.5em;
+      }
+      nav, section {
+        font-size:1.5em;
+      }
+      section {
+        width:94%;
+      }
+      nav ul {
+        display: table;
+        text-align: center;
+        float: none;
+        width:100%;
+      }
+      nav ul li {
+        float:none;
+      }
+    }
