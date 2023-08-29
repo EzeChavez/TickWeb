@@ -6,7 +6,10 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Reservas_Aparts_Controller;
 use App\Http\Controllers\SimpleController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\FinanzasController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\MarketingController;
+use App\Http\Controllers\InformesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,8 +36,9 @@ Route::resource('aparts', 'App\Http\Controllers\reservasApartsController');
 Route::get('/reservas/create', function () {
     return view('reservas_aparts.create');
 });
-
-
+Route::get('/informes', [InformesController::class, 'index'])->name('informes.view');
+Route::get('/marketing', [MarketingController::class, 'index'])->name('marketing.view');
+Route::get('/finanzas', [FinanzasController::class, 'index'])->name('finanzas.view');
 Route::get('/alquileres-camping', [AlquilerCampingController::class, 'index'])->name('AlquilerCamping.view');
 Route::get('/inicio-tick', [InicioController::class, 'index'])->name('inicio.view');
 

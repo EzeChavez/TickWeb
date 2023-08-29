@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     var calendarEl = document.getElementById('agenda');
     
     var csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
@@ -8,8 +9,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Cargar el calendario con los eventos traidos de la bd
     var calendar = new FullCalendar.Calendar(calendarEl, {
+        themeSystem: 'bootstrap', 
         initialView: 'dayGridMonth',
         locale: 'es',
+        buttonText: {
+            today: 'Hoy', // Personaliza el texto del botón "Today"
+            month: 'Mes',
+            week: 'Semana',
+            day: 'Día',
+            list: 'Lista'
+            // Agrega aquí otros botones y sus textos personalizados si es necesario
+        },
         eventClick: function(info) {
             var evento = info.event;
             FechaInicio = moment(evento.start).format('DD/MM/YYYY');
@@ -54,8 +64,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         firstDay: 1, //configura el primer dia de la semana como lunes
-        events: function (fetchInfo, successCallback, failureCallback) {
 
+        customButtons: {
+            nuevoBoton: {
+                text: 'Nueva reserva',
+                click: function() {
+            
+                    alert('Aca se abrira un formulario para cargar la reserva');
+                },
+                style: {
+                    backgroundColor: '#28a745', // Color de fondo verde
+                    color: '#fff', // Color de texto blanco
+                    borderColor: '#28a745', // Color del borde verde
+                    // Agrega otras propiedades CSS si es necesario
+                }
+            }
+        },
+        headerToolbar: {
+            left: 'prev,next today', // Agrega 'nuevoBoton' aquí para incluir tu botón personalizado
+            center: 'title',
+            right: 'nuevoBoton dayGridMonth,timeGridWeek,timeGridDay'
+        },
+
+        events: function (fetchInfo, successCallback, failureCallback) {    
 
             // Realizar una petición AJAX para obtener los eventos desde el backend
             fetch('/tick-app/public/reservas', {
@@ -79,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     eventosPorDia[fecha]++;
                 });
 
-             
-
                 // Pasar los datos obtenidos al callback de FullCalendar para mostrar los eventos
                 successCallback(data);
             });
@@ -88,8 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     calendar.render();
-      // Cambiar el contenido del botón "today" a "hoy" revisar
-      document.querySelector('.fc-today-button.fc-button.fc-button-primary').textContent = 'hoy';
 
    // Inicializar campos de Flatpickr cuando el modal se muestre
    $("#reserva").on("shown.bs.modal", function () {
@@ -154,9 +181,9 @@ $(document).ready(function () {
         $('#reserva').modal('show');
     });
 
-    $('#buscarCliente').on('click', function () {
-        var searchTerm = $(this).val();
-        
+    $('#buscarCliente').on('input', function () {
+        //var searchTerm = $(this).val();
+        var searchTerm = 4;
         
         $.ajax({
             url: '/tick-app/public/buscar-clientes',

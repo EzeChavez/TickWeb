@@ -10,6 +10,7 @@
 @stop
 
 @section('content')
+<!-- FILTRADO POR ANULADAS 
 <div class="form-group row">
     <div >Ver reservas con los siguientes estados</div>
   
@@ -22,7 +23,7 @@
     </div>
   </div>
 
-
+ -->
 <div class="container">
 
         <div class="agenda" id="agenda">
@@ -164,6 +165,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.3/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 @stop
 
 
@@ -172,6 +174,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr@4.6.3/dist/flatpickr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
+   
 
     <script type="module" src="../resources/js/agenda.js"></script>
 
