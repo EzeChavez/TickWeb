@@ -59,3 +59,5 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 });
 
 // Otras rutas adicionales aquí si es necesario...
+Route::get('/email/form', 'EmailController@showForm')->name('form.show');
+Route::post('/email/send', 'EmailController@sendEmail')->name('email.send');

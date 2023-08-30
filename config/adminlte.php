@@ -341,7 +341,7 @@ return [
         ],
         ['header' => '----------'],
         [
-            'text'        => 'Finanzas',
+            'text'        => 'Costos',
             'url'         => '/finanzas',
             'icon'        => 'fas fa-hand-holding-usd',
             'label'       => '%',

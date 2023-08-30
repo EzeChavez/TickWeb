@@ -7,7 +7,24 @@
 @stop
 
 @section('content')
-<h1>Marketing</h1>
+<div class="container">
+    <h1>Personalizar y Enviar Correo Electrónico</h1>
+    @if(session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+    <form action="{{ route('email.send') }}" method="POST">
+        @csrf
+        <div class="mb-3">
+            <label for="subject" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Correo Electrónico</button>
+    </form>
+</div>
 
 @stop
 
