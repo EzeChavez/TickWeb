@@ -11,7 +11,7 @@
 @section('content')
 
 
-<table id="clientes" class="table table-dark table-striped mt-5">
+<table id="clientes" class="table table-primary table-striped mt-5">
     <thead>
         <tr>
             <th scope="col">Id</th>
@@ -22,8 +22,6 @@
             <th scope="col">Domicilio</th>
             <th scope="col">Patente</th>
             <th scope="col">Actualizado</th>
-            <th scope="col">Creado</th>
-            <th scope="col">Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -36,8 +34,6 @@
             <td>{{$Cliente->telefono}}</td>
             <td>{{$Cliente->domicilio}}</td>
             <td>{{$Cliente->patente}}</td>
-            <td>{{$Cliente->updated_at}}</td>
-            <td>{{$Cliente->created_at}}</td>
             <td>
                 <form action="{{ route('clientes.destroy',$Cliente->id)}}" method="POST">
                 @method('DELETE')    
@@ -66,8 +62,33 @@
 <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
 <script>
-$(document).ready(function () {
-    $('#clientes').DataTable();
+$(document).ready(function() {
+    $('#clientes').DataTable({
+        // Otras opciones de DataTables...
+        "language": {
+            "sEmptyTable": "No hay datos disponibles en la tabla",
+            "sInfo": "Mostrando _START_ a _END_ de _TOTAL_ entradas",
+            "sInfoEmpty": "Mostrando 0 a 0 de 0 entradas",
+            "sInfoFiltered": "(filtrado de _MAX_ entradas totales)",
+            "sInfoPostFix": "",
+            "sInfoThousands": ",",
+            "sLengthMenu": "Mostrar _MENU_ entradas",
+            "sLoadingRecords": "Cargando...",
+            "sProcessing": "Procesando...",
+            "sSearch": "Buscar:",
+            "sZeroRecords": "No se encontraron registros coincidentes",
+            "oPaginate": {
+                "sFirst": "Primero",
+                "sLast": "Último",
+                "sNext": "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending": ": activar para ordenar la columna ascendente",
+                "sSortDescending": ": activar para ordenar la columna descendente"
+            }
+        }
+    });
 });
 </script>
 @stop

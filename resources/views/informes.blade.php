@@ -1,9 +1,8 @@
 @extends('adminlte::page')
+
 @section('title', 'Inicio')
 
 @section('content_header')
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
-@stop
 
 @section('content')
 <h1>Informes</h1>
@@ -12,6 +11,7 @@
         <!-- Agrega un lienzo (canvas) para el gráfico -->
         <canvas id="graficoBarras"></canvas>
 </div>
+@stop
 
 @section('css')
 
@@ -20,6 +20,7 @@
 
 
 @section('js')
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>  
 <script>
         // Datos para el gráfico (ejemplo)
         var datos = {
