@@ -307,21 +307,22 @@ return [
       //      'text' => 'buscar',
       //  ],
       ['header' => 'Home'],
-        [
-            'text'        => 'Inicio',
-            'url'         => '/inicio-tick',
-            'icon'        => 'fa fa-home',
-            'label'       => '%',
-            'label_color' => 'success',
-        ], 
+      [
+        'text'        => 'Inicio',
+        'url'         => '/dashboard',
+        'icon'        => 'fa fa-home',
+        'label'       => '%',
+        'label_color' => 'success',
+    ], 
+       
        ['header' => 'Aparts'],
-        [
-            'text'        => 'Aparts',
-            'url'         => '/dashboard',
-            'icon'        => 'far fa-fw fa-calendar',
-            'label'       => '%',
-            'label_color' => 'success',
-        ], 
+       [
+        'text'        => 'Aparts',
+        'url'         => '/inicio-tick',
+        'icon'        => 'far fa-fw fa-calendar',
+        'label'       => '%',
+        'label_color' => 'success',
+    ], 
        ['header' => 'Camping'],
        [
         'text'        => 'Camping',

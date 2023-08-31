@@ -11,9 +11,9 @@
 @section('content')
 
 
-<table id="clientes" class="table table-primary table-striped mt-5">
+<table id="clientes" class="table-active table-bordered table table-striped">
     <thead>
-        <tr>
+        <tr class="table-primary">
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
@@ -21,7 +21,7 @@
             <th scope="col">Telefono</th>
             <th scope="col">Domicilio</th>
             <th scope="col">Patente</th>
-            <th scope="col">Actualizado</th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
